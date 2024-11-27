@@ -17,7 +17,7 @@ import com.medicover.hms.objectrepository.Patient_DashboardPage;
 @Listeners(com.medicover.hms.listenerutility.ListenerImp.class)
 public class AddPatientTest extends BaseUtility {
 
-	@Test
+	@Test(groups="regression")
 	public void addPatient() throws Throwable {
 		String URL = fLib.getDataFromPropertyFile("url");
 		String doctorUSERNAME = fLib.getDataFromPropertyFile("doctor_username");

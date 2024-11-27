@@ -11,7 +11,7 @@ import com.medicover.hms.objectrepository.Admin_DashboardPage;
 @Listeners(com.medicover.hms.listenerutility.ListenerImp.class)
 public class AdminLoginTest extends BaseUtility {
 	
-	@Test
+	@Test(groups="smoke")
 	public void adminLogin() throws Throwable {
 		String URL = fLib.getDataFromPropertyFile("url");
 		String adminUSERNAME = fLib.getDataFromPropertyFile("admin_username");

@@ -9,7 +9,7 @@ import com.medicover.hms.objectrepository.PatientLoginPage;
 import com.medicover.hms.objectrepository.Patient_DashboardPage;
 @Listeners(com.medicover.hms.listenerutility.ListenerImp.class)
 public class PatientLoginTest extends BaseUtility {
-@Test
+@Test(groups="regression")
 public void userLogin() throws Throwable {
 	String URL = fLib.getDataFromPropertyFile("url");
 	String patientUSERNAME = fLib.getDataFromPropertyFile("patient_username");

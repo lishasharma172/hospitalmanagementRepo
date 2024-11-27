@@ -15,7 +15,7 @@ import com.medicover.hms.objectrepository.Admin_DashboardPage;
 public class DoctorSpecialization extends BaseUtility{
 
 
-		@Test
+		@Test(groups="smoke")
 		public void doctorSpecialization() throws Throwable {
 			String URL = fLib.getDataFromPropertyFile("url");
 			String adminUSERNAME = fLib.getDataFromPropertyFile("admin_username");

@@ -107,7 +107,9 @@ public class Admin_AddDoctorPage {
 		docMailIdTextField.sendKeys(email);
 		passwordTextField.sendKeys(pass);
 		confirmPasswordTextField.sendKeys(cpass);
-		submitBtn.click();	
+		WebdriverUtility wlib=new WebdriverUtility();
+		wlib.clickElementJavaExecutor(driver, submitBtn);
+//		submitBtn.click();	
 	}
 	public void editDocDetails(String contactno, String clinic) {
 		docContactNoTextField.clear();

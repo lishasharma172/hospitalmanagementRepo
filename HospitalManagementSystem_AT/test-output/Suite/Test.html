@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 26 09:40:13 IST 2024</td>
+<td>Started on:</td><td>Tue Nov 26 17:36:50 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>104 seconds (104891 ms)</td>
+<tr><td>Total time:</td><td>63 seconds (63418 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,95 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Admin_Module_Login.CreateDoctorAccountTest.createDoctor()'><b>createDoctor</b><br>Test class: Admin_Module_Login.CreateDoctorAccountTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; name=&quot;submit&quot; id=&quot;submit&quot; class=&quot;btn btn-o btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (340, 564). Other element would receive the click: &lt;div style=&quot;width: 100%;position: fixed;bottom:0px;left:0px;padding-top:10px;background-color:rgba(205, 232, 235, 0.9);display:flex;justify-content:center;z-index: 1000;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=130.0.6723.119)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29de69f3a20b133833746f64431af435, clickElement {id=f.C8D8E6230988C7865C455DC2D504C355.d.7E809A614C832A513BDD76542B95B4F7.e.158}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.119, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:9994/devtool..., se:cdpVersion: 130.0.6723.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (29de69f3a20b133833746f64431af435)] -&gt; xpath: //button[@type=&apos;submit&apos;]	]
+Session ID: 29de69f3a20b133833746f64431af435
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.medicover.hms.objectrepository.Admin_AddDoctorPage.addDoctorDetails(Admin_AddDoctorPage.java:110)
+	at Admin_Module_Login.CreateDoctorAccountTest.createDoctor(CreateDoctorAccountTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace575714749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace575714749'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; name=&quot;submit&quot; id=&quot;submit&quot; class=&quot;btn btn-o btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (340, 564). Other element would receive the click: &lt;div style=&quot;width: 100%;position: fixed;bottom:0px;left:0px;padding-top:10px;background-color:rgba(205, 232, 235, 0.9);display:flex;justify-content:center;z-index: 1000;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=130.0.6723.119)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29de69f3a20b133833746f64431af435, clickElement {id=f.C8D8E6230988C7865C455DC2D504C355.d.7E809A614C832A513BDD76542B95B4F7.e.158}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.119, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:9994/devtool..., se:cdpVersion: 130.0.6723.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (29de69f3a20b133833746f64431af435)] -&gt; xpath: //button[@type=&apos;submit&apos;]	]
+Session ID: 29de69f3a20b133833746f64431af435
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.medicover.hms.objectrepository.Admin_AddDoctorPage.addDoctorDetails(Admin_AddDoctorPage.java:110)
+	at Admin_Module_Login.CreateDoctorAccountTest.createDoctor(CreateDoctorAccountTest.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>8</td>
+<td>Admin_Module_Login.CreateDoctorAccountTest@10e31a9a</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,40 +164,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Paitent_Module_Login.PatientLoginTest.userLogin()'><b>userLogin</b><br>Test class: Paitent_Module_Login.PatientLoginTest</td>
-<td></td>
-<td>1</td>
-<td>Paitent_Module_Login.PatientLoginTest@5c33f1a9</td></tr>
-<tr>
-<td title='Admin_Module_Login.CreateDoctorAccountTest.createDoctor()'><b>createDoctor</b><br>Test class: Admin_Module_Login.CreateDoctorAccountTest</td>
-<td></td>
-<td>16</td>
-<td>Admin_Module_Login.CreateDoctorAccountTest@7f3b84b8</td></tr>
-<tr>
-<td title='Doctor_Module_.AddPatientTest.addPatient()'><b>addPatient</b><br>Test class: Doctor_Module_.AddPatientTest</td>
-<td></td>
-<td>12</td>
-<td>Doctor_Module_.AddPatientTest@57a3af25</td></tr>
-<tr>
 <td title='Admin_Module_Login.ManageDoctorTest.manageDoctor()'><b>manageDoctor</b><br>Test class: Admin_Module_Login.ManageDoctorTest</td>
 <td></td>
-<td>19</td>
-<td>Admin_Module_Login.ManageDoctorTest@2b662a77</td></tr>
+<td>21</td>
+<td>Admin_Module_Login.ManageDoctorTest@158d2680</td></tr>
 <tr>
 <td title='Admin_Module_Login.AdminLoginTest.adminLogin()'><b>adminLogin</b><br>Test class: Admin_Module_Login.AdminLoginTest</td>
 <td></td>
-<td>3</td>
-<td>Admin_Module_Login.AdminLoginTest@223d2c72</td></tr>
+<td>6</td>
+<td>Admin_Module_Login.AdminLoginTest@16d04d3d</td></tr>
 <tr>
-<td title='Admin_Module_Login.DoctorSpecialization.doctorSpecialization()'><b>doctorSpecialization</b><br>Test class: Admin_Module_Login.DoctorSpecialization</td>
+<td title='Doctor_Module_.AddPatientTest.addPatient()'><b>addPatient</b><br>Test class: Doctor_Module_.AddPatientTest</td>
 <td></td>
-<td>24</td>
-<td>Admin_Module_Login.DoctorSpecialization@7f0eb4b4</td></tr>
-<tr>
-<td title='Paitent_Module_Login.CancelAppointmentTest.cancelAppointmentByUser()'><b>cancelAppointmentByUser</b><br>Test class: Paitent_Module_Login.CancelAppointmentTest</td>
-<td></td>
-<td>2</td>
-<td>Paitent_Module_Login.CancelAppointmentTest@1623b78d</td></tr>
+<td>10</td>
+<td>Doctor_Module_.AddPatientTest@131774fe</td></tr>
 </table><p>
 </body>
 </html>

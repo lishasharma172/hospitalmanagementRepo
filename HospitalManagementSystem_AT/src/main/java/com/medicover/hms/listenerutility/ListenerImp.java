@@ -15,12 +15,13 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.medicover.hms.basetest.BaseUtility;
+import com.medicover.hms.generic.fileutility.UtilityClassObject;
 
 public class ListenerImp implements ITestListener, ISuiteListener {
 	public ExtentReports report;
 	public static ExtentTest test;
 
-	private static ThreadLocal<ExtentTest> extest = new ThreadLocal<ExtentTest>();
+//	private static ThreadLocal<ExtentTest> extest = new ThreadLocal<ExtentTest>();
 
 	public void onStart(ISuite suite) {
 		System.out.println("Report configuration");
@@ -49,9 +50,9 @@ public class ListenerImp implements ITestListener, ISuiteListener {
 	public void onTestStart(ITestResult result) {
 		System.out.println("====" + result.getMethod().getMethodName() + ">=======START========");
 		test = report.createTest(result.getMethod().getMethodName());
-
-		test.log(Status.INFO, result.getMethod().getMethodName() + "==>STARTED<==");
-		extest.set(test);
+		UtilityClassObject.setTest(test);
+		UtilityClassObject.getTest().log(Status.INFO, result.getMethod().getMethodName() + "==>STARTED<==");
+//		extest.set(test);
 
 	}
 
@@ -63,9 +64,9 @@ public class ListenerImp implements ITestListener, ISuiteListener {
 
 		// WebDriverUtility w = new WebDriverUtility();
 		String time = new Date().toString().replace(" ", "_").replace(":", " ");
-		test.addScreenCaptureFromBase64String(filePath, testName + "_" + time);
-		test.log(Status.FAIL, result.getMethod().getMethodName() + "==>FAILED<==");
-		test.log(Status.FAIL, result.getThrowable());
+		UtilityClassObject.getTest().addScreenCaptureFromBase64String(filePath, testName + "_" + time);
+		UtilityClassObject.getTest().log(Status.FAIL, result.getMethod().getMethodName() + "==>FAILED<==");
+		UtilityClassObject.getTest().log(Status.FAIL, result.getThrowable());
 
 //		try {
 //			w.takeScreenshotEntirePage(BaseClass.sdriver, testName + time);
@@ -77,7 +78,7 @@ public class ListenerImp implements ITestListener, ISuiteListener {
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		test.log(Status.FAIL, result.getThrowable());
+		UtilityClassObject.getTest().log(Status.FAIL, result.getThrowable());
 
 	}
 
@@ -88,8 +89,8 @@ public class ListenerImp implements ITestListener, ISuiteListener {
 
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("====" + result.getMethod().getMethodName() + ">=======END========");
-		test.log(Status.PASS, result.getMethod().getMethodName() + "==>COMPLETED<==");
-		extest.get();
+		UtilityClassObject.getTest().log(Status.PASS, result.getMethod().getMethodName() + "==>COMPLETED<==");
+		
 	}
 
 }

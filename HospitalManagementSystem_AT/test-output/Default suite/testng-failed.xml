@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Doctor_Module_.AddPatientTest">
+      <class name="Admin_Module_Login.CreateDoctorAccountTest">
         <methods>
           <include name="configBM"/>
           <include name="configureBS"/>
           <include name="configAM"/>
+          <include name="createDoctor"/>
           <include name="configBC"/>
           <include name="configAS"/>
           <include name="configAC"/>
-          <include name="addPatient"/>
         </methods>
-      </class> <!-- Doctor_Module_.AddPatientTest -->
+      </class> <!-- Admin_Module_Login.CreateDoctorAccountTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

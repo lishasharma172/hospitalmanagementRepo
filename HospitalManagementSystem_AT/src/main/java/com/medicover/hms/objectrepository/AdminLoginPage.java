@@ -3,6 +3,7 @@ package com.medicover.hms.objectrepository;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -45,10 +46,12 @@ public class AdminLoginPage {
 	private WebElement submitBtn;
 
 	public void adminLogin( String username, String password) throws InterruptedException {
+		Thread.sleep(3000);
 		WebdriverUtility wu = new WebdriverUtility();
-
 		wu.clickElementJavaExecutor(driver, adminLink);
 		// adminLink.click();
+//		Actions action=new Actions(driver);
+//		action.moveToElement(adminLink).click().perform();
 		adminUsername.sendKeys(username);
 		adminPassword.sendKeys(password);
 		submitBtn.click();

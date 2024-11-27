@@ -15,6 +15,7 @@ import org.testng.annotations.Parameters;
 
 import com.medicover.hms.generic.fileutility.ExcelUtility;
 import com.medicover.hms.generic.fileutility.FileUtility;
+import com.medicover.hms.generic.fileutility.UtilityClassObject;
 import com.medicover.hms.generic.fileutility.WebdriverUtility;
 import com.medicover.hms.objectrepository.AdminLoginPage;
 
@@ -23,8 +24,7 @@ public class BaseUtility {
 	public FileUtility fLib = new FileUtility();
 	public ExcelUtility eLib=new ExcelUtility();
 	public static WebDriver sdriver = null;
-
-	public WebDriver driver;
+    public WebDriver driver;
 
 	@BeforeSuite(groups= {"smoke","regression"})
 	public void configureBS() {
@@ -33,19 +33,19 @@ public class BaseUtility {
 	}
 	@Parameters("BROWSER")
 	@BeforeClass(groups= {"smoke","regression"})
-	public void configBC(@Optional("chrome") String browser) throws Throwable {
-		System.out.println("launch the browser");
-		String BROWSER = fLib.getDataFromPropertyFile("browser");
+	public void configBC(@Optional("edge") String browser) throws Throwable {
+		System.out.println("launch the browser"+ browser);
+		String BROWSER =browser;
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		} else if (BROWSER.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
-		} else {
-			driver = new ChromeDriver();
-		}
+		} 
 		sdriver = driver;
+		UtilityClassObject.setDriver(driver);
+		driver=UtilityClassObject.getdriver();
 	}
 
 	@BeforeMethod(groups= {"smoke","regression"})

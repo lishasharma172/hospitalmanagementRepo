@@ -11,7 +11,7 @@ import com.medicover.hms.objectrepository.PatientLoginPage;
 import com.medicover.hms.objectrepository.Patient_DashboardPage;
 @Listeners(com.medicover.hms.listenerutility.ListenerImp.class)
 public class CancelAppointmentTest extends BaseUtility {
-	@Test
+	@Test(groups="smoke")
 	public void cancelAppointmentByUser() throws Throwable {
 		String URL = fLib.getDataFromPropertyFile("url");
 		String patientUSERNAME = fLib.getDataFromPropertyFile("patient_username");
